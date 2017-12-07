@@ -87,3 +87,67 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/*======================================================
+=            Fluid-loading-animation-in-css            =
+======================================================*/
+main {
+  min-height: 100vh;
+  padding: 10px;
+
+  background-color: coral;
+}
+
+.loading-box {
+  position: fixed;
+  top: calc(50% - 37px);
+  left: calc(50% - 37px);
+
+  height: 75px;
+  width: 75px;
+
+  border: 10px solid white;
+
+  animation: roll 2s ease-out infinite;
+  transform:
+    rotate(180deg);
+
+}
+
+.loading-inner-box {
+  height: 20px;
+
+  background-color: white;
+  animation: fill 2s infinite ease-in;
+}
+
+@keyframes fill {
+  0% {
+    height: 0;
+  }
+  40% {
+    height: 55px;
+  }
+  60% {
+    height: 55px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(180deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*=====  End of Fluid-loading-animation-in-css  ======*/
